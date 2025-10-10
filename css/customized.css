@@ -1,0 +1,120 @@
+:root {
+  /* --- Primary Brand Colors --- */
+  --color-primary: #0F48AF;   /* Deep blue – trust, stability */
+  --color-secondary: #0B409C; /* Medium blue – supportive tone */
+  --color-accent: #0274B2;    /* Bright blue – highlights, links, buttons */
+
+  /* --- Action / Impact Colors --- */
+  --color-danger: #DA1A25;    /* Deep red – urgency, passion */
+  --color-highlight: #FE3231; /* Bright red – calls to action or donation */
+
+  /* --- Base / Neutral Colors --- */
+  --color-white: #FFFFFF;     /* Backgrounds, text contrast */
+  --color-light: #F8F9FA;     /* Light background variant */
+  --color-dark: #0B1526;      /* Optional dark text tone */
+}
+
+/* color palete */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-secondary) !important;
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary) !important;
+}
+
+.text-accent {
+    color: var(--color-accent) !important;
+}
+
+.bg-accent {
+    background-color: var(--color-accent) !important;
+}
+
+.text-danger {
+    color: var(--color-danger) !important;
+}
+
+.bg-danger {
+    background-color: var(--color-danger) !important;
+}
+
+.text-highlight {
+    color: var(--color-highlight) !important;
+}
+
+.bg-highlight {
+    background-color: var(--color-highlight) !important;
+}
+
+.text-white {
+    color: var(--color-white) !important;
+}
+
+.bg-white {
+    background-color: var(--color-white) !important;
+}
+
+.text-light {
+    color: var(--color-light) !important;
+}
+
+.bg-light {
+    background-color: var(--color-light) !important;
+}
+
+.text-dark {
+    color: var(--color-dark) !important;
+}
+
+.bg-dark {
+    background-color: var(--color-dark) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Logo and Name Styling --- */
+.famous_logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo-img {
+    height: 70px;      /* Adjust as needed */
+    width: auto;
+    object-fit: contain;
+}
+
+.famous_logo h1 {
+    font-size: 1.8rem; /* Balanced text size beside the logo */
+    line-height: 1.2;
+    font-weight: 700;
+    color: #0066cc;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 50px;
+    }
+    .famous_logo h1 {
+        font-size: 1.4rem;
+    }
+}
+
