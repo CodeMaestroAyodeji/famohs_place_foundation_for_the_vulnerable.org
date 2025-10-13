@@ -80,6 +80,7 @@
         items: 1,
         autoplay: true,
         smartSpeed: 1000,
+        autoplayTimeout: 10000,
         dots: false,
         loop: true,
         nav : true,
