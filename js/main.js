@@ -107,39 +107,47 @@
         ]
     });
 
-    // Contact Form Submission
-    var form = document.getElementById("contact-form");
-    var status = document.getElementById("form-status");
-
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
+    // Form Submission
+    function handleFormSubmit(form, status) {
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: event.target.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    window.location.href = 'thank-you.html';
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! There was a problem submitting your form"
+            });
         }
-      }).then(response => {
-        if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
-          form.reset()
-        } else {
-          response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-            } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
-            }
-          })
-        }
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    if (form) {
         form.addEventListener("submit", handleSubmit)
+    }
+
+    var contactForm = document.getElementById("contact-form");
+    if (contactForm) {
+        var contactFormStatus = document.getElementById("form-status");
+        handleFormSubmit(contactForm, contactFormStatus);
+    }
+
+    var subscriptionForm = document.getElementById("subscription-form");
+    if (subscriptionForm) {
+        var subscriptionFormStatus = document.createElement('div');
+        subscriptionForm.appendChild(subscriptionFormStatus);
+        handleFormSubmit(subscriptionForm, subscriptionFormStatus);
     }
     
 })(jQuery);
-
