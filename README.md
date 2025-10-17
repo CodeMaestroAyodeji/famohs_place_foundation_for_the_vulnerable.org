@@ -9,6 +9,8 @@ This repository contains the source code for the official website of the Famohs 
 - **Address:** Plot 10 Urban Planning Way, 4th Avenue, Gwarinpa Estate, Abuja, Nigeria.
 - **Email:** famohsplacefoundation@gmail.com
 - **Phone:** 0906 046 9444
+- **Website:** https://www.famohsplacefoundation.org/
+
 
 ## Aims and Objectives
 
@@ -51,4 +53,33 @@ We aim to contribute to social sustainability through collaborations, partnershi
 
 ---
 
-This website was built using the "Charitize - Charity Organization Website Template" by HTML Codex.
+## Development
+
+This website was developed and is maintained by:
+
+- **Name:** Ayodeji Ajuwon
+- **Company:** LaunchHive Hub
+- **Company Email:** info.launchhivehub@gmail.com
+- **Personal Email:** ajuwon2013@gmail.com
+- **Company Website:** https://j6h5i7cpwx69.manus.space/
+- **Github Link:** https://github.com/CodeMaestroAyodeji
+- **Contact Number:** +234 706 064 9410, +234 802 405 2433
+
+### Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- [Bootstrap](https://getbootstrap.com/)
+- [jQuery](https://jquery.com/)
+- [Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
+- [Animate.css](https://animate.style/)
+- [Font Awesome](https://fontawesome.com/)
+
+### Running the Project
+
+To run this project locally, simply open the `index.html` file in your web browser.
+
+---
+
+This website was built using the "Charitize - Charity Organization Website Template" by HTML Codex as a base.
